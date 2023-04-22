@@ -1,0 +1,102 @@
+DOM: document Object Model: mô hình các đối tượng trong tài liệu HTMl, thông qua mô hình DOM có thể truy xuất đến các thẻ HTML dễ dàng.
+- DOM: có nhiệm vụ xử lý: đổi thuộc tính,đối CSS các thẻ, đổi cấu trúc các thẻ HTML:thêm, sửa, xóa. 
+- JS muốn truy xuất đến một thẻ HTML nào đều phải thông qua đối tượng document.
+- 8 loại DOM: 
++ DOM document: lưu trữ toàn bộ thành phần website
++ DOM element: truy xuất tới thẻ HTML thông qua thuộc tính như id, class, name
++ DOM HTML: thay đổi giá trị nội dung và giá trị thuộc tính các thẻ HTML
++ DOM CSS: thay đổi định dạng CSS của thẻ HTML
++ DOM event: gán sự kiện như onclick, onload... vào các thẻ
++ DOM listener: lắng nghe các sự kiện tác động lên thẻ HTML đó
++ DOM navigation: quản lý, thao tác các thẻ HTML, thể hiện mqh cha-con
++ DOM Node: có nhiệm vụ thao tác với HTML thông qua đối tượng object.
+
+1. DOM document:
+- truy xuất đến thẻ thông qua:
++ document.getElementById: thông qua id của thẻ, nếu bị trùng id sẽ lấy thẻ đầu tiên
++ document.getElementByTagName:
++ document.getElementByClassName: lấy các thẻ thông qua tên class trùng với tên của tham số truyền vào
+2. DOM Node:
+- document.createElement():tạo một thẻ HTML mới với tham số truyền vào là tên của thẻ cần tạo
+- để thêm thẻ vừa tạo vào trang web ta dùng phương thức appendChild();
+- document.createTextNode(): thay thế phương thức innerHTML, tạo ra một chuỗi
+- appendChild(): thêm vào vị trí cuối cùng của đối tượng một thẻ HTML nào đó.
+- insertBefore(node_insert, node_child): thêm vào một Node trước một node con nào đó.
++ node_insert: node muốn thêm vào
++ node_child: node con muốn thêm vào trước nó
+- removeChild(): xóa một Node con khỏi node hiện tại
+- replaceChild(): thay thế một node bằng một node khác
+
+//--------------------------------------------------------------------------------------
+//--------------------- CÁC EVENT trong JAVASCRIPT ------------------------
+- Để thêm/ bắt sự kiện trong JS có 2 cách:
++ Bắt sự kiện trực tiếp trong thẻ HTML
++ Bắt sự kiện trong HTML bằng JAVASCRIPT
+- Các sự kiện thường dùng:
++ onclick: khi click vào thẻ HTML
++ ondbclick: khi double click vào thẻ HTML
++ onchange: xảy ra khi giá trị của thẻ HTML thay đổi.
++ onmouseover: xảy ra khi chuột bắt đầu đi vào thẻ HTML
++ onmouseout: xảy ra khi chuột bắt đầu rời khỏi thẻ HTML
++ onkeydown: xảy ra khi gõ phím bất kì vào ô input
++ onkeyup: xảy ra khi gõ phím nhưng lúc nhả phím sẽ được kích hoạt
++ onblur: xảy ra khi con trỏ chuột rời khỏi ô input
+//------------------------------------------------------------------------------------  
+//-------------------Window.onload()----------------------------------------------------------------
+- khi trình duyệt load xong mọi thứ thì những đoạn code nằm bên trong mới đc chạy
+
+//------------------------------------------------------------------------------------
+// Học về BOM:
+- BOM: Browser Object Model: các đối tượng liên quan đến trình duyệt:
+- Quy ước các loại BOM:
++ Window
++ screen
++ location
++ history
++ navigator
++ popup
++ timing
++ cookies   
+1. Đối tượng window trong JS:
+- thuộc nhóm BOM, chủ yếu là các thao tác với trình duyệt như tính chiều cao, di chuyển, thay đổi kích thước,
+lấy đường dẫn URL...
+- mở một cửa sổ mới: window.open(url, name, options)
+- đóng của sổ vừa mở: window.close()
+- di chuyển của sổ: window.move(top, left)
+- thay đổi kích thước của sổ: window.resize(width, height)
+- lấy url của trang web hiện tại: window.location.href
+2. Các phương thức của location trong JS:
+a. reload(): tải lại trang
+- window.location.reload(url)
+b. replace(): ghi đè trang web
+- phương thức ít khi sử dụng, thay vào đó người ta sử dụng window.location.href = url.
+Tuy nhiên: 
++ replace(): trình duyệt sẽ không ghi vào trong lịch sử
++ location.href(): trình duyệt sẽ ghi vào lịch sử
+c. window.location.assign(url): load một trang mới
+- về công dụng sẽ giống với hai cách trên
+3. Các thuộc tính của location:
+- hash: thiết lập hoặc lấy phần sau dấu # của url
+- host: thiết lập hoặc lấy hostname và portnumber của url
+- hostname: thiết lập hoặc lấy hostname;
+- href: thiết lập hoặc lấy url
+- origin: trả về protocal, hostname và portnumber của url
+- pathname: thiết lập hoặc lất pathname của url
+- port: thiết lập hoặc để lấy port của url
+- search: thiết lập hoặc lấy phần query string của URL
+
+//------------------------------------------------------------------------------
+//-------------------   HỌC về cookies
+- cookies : dữ liệu được lưu trữ trong một file text, nằm trong máy tính. Thời gian lưu trữ cookies là vĩnh viễn hoặc
+một thời gian cụ thể. Mỗi domain chỉ có một dung lượng cookies tối đa.
+- cookies được lưu trữ dưới dạng name=value. Khi trình duyệt gửi thông tin lên server thì cookies sẽ được gửi kèm theo
+Cookies hay được sử dụng để xây dựng chức năng Remember Me khi Login
+2. Các thao tác với cookies
+2.1. Tạo cookies:
+- lưu trữ chuỗi cookie chứa thông tin website:
+document.cookie = 'website = gamek.vn'
+- thiết laajo thời gian sống cho cookie, định dạng tgian là UTC
+document.cookie = 'website = gamek.vn; expires = Fri, 21 Apr 2023 21:00:00 UTC';
+- lấy giá trị của cookie
+- đổi giá trị của cookie
+- Xóa cookie: trong JS không có hàm xóa phải sử dụng exprires để thiết lập thời gian sống

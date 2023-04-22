@@ -1,0 +1,70 @@
+- JavaScript(JS) là ngôn ngữ lập trình kịch bản dựa trên một đối tượng có sẵn hoặc tự định nghĩa.
+- JS sử dụng trong các ứng dụng web
+-Nhiệm vụ : xử lý những đối tượng HTML trên trình duyệt, có thể can thiệp với các hành động: thêm , sửa, xóa các thuộc tính CSS và các thẻ 
+HTML một cách dễ dàng. 
+- Framework: NodeJS, thư viện: Angular, ReactJS
+2. JS Framework
+- bộ thư viện được xây dựng dựa vào Js, được tạo ra để phục vụ cho một lĩnh vực nào đó.
+- Angular: xây dựng ứng dụng Single Page
+- NodeJS: phát triển phía Server để xây dựng ứng dụng Realtime
+- Sencha Touch: Xây dựng ứng dụng Mobile
+- ExtJS: xây dựng ứng dụng quản lý
+- jQuery: 
+- ReactJS: viết ứng dụng mobile
+3. Đặt thẻ Script:
+- Cách 1: Viết trong file html hiện tại. Thông thường viết trên phần <head>
+- Cách 2: Viết trong 1 file js khác rồi import vào
+- Cách 3: Viết đoạn mã trực tiếp trong các thẻ HTMl. ví dụ: onclick = alert('Hi')...
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+KHAI BÁO BIẾN
+1. Cách khai báo BIẾN
+- khai báo với "var": var name;
+- khai báo với "let": let age. Phạm vi trong khối khai báo
+- khai báo với "const": const ville = 'Hà Nội'. Khai báo biến const phải gán giá trị, su này không thể thay đổi giá trị cho biến.
+- Các kiểu giá trị thông dụng: Number, String, Array, Object.
+------------------------------------------------------------------------------------------------------------
+-- Function:
+- còn gọi là hàm: một đoạn code thực thi một nhiệm vụ nào đó, code không được biên dịch cho đến khi được gọi.
+- 2 cách tạo hàm:
++ declare function: 
+    function name (){};
++ expression function:
+    const name = function(){}
+- Trong JS không tồn tại khái niệm con trỏ và tham chiếu trong hàm.
+- Giá trị mặc định của tham số: sử dụng toán tử  ||. Nếu vế trái có giá trị rỗng: undefined, null, false... kết quả sẽ trả về vế phải
+ngược lại là vế trái.
+- Arrow function: tạo hàm bằng dấu "=>".
+------------------------------------------------------------------------------------------------------------
+-- Biến toàn cục và biến cục bộ:
+- Biến cục bộ: khai báo biến nằm trong một hàm nào đó, biến sẽ ko được sử dụng bên ngoài
+- Biến toàn cục: khai báo bên ngoài không nằm trong một hàm nào cả, có thể truy cập mọi nơi.
+------------------------------------------------------------------------------------------------------------
+-- setTimeout và setInterval:
+1. setTimeOut():
+- thiết lập một khoảng thời gian, thực thi 1 lần đoạn code.
+Syntax: setTimeout(function(){}, time);
+- clearTimeout(): thiết lập thời gian để hủy bỏ hàm setTimeout.
+tham số đầu vào là đối tượng setTimeout nên cần phải gán hàm setTimeout vào 1 biến cụ thể
+2. setInterval():
+- thiết lập một khoảng thời gian để thực hiện đoạn code vô hạn lần
+Syntax: setInterval(function(){}, time);
+--------------------------------------------------------------------------------------------------------------------------------
+--- Vòng lặp:
+-for:
+-while:
++ Lặp khi điều kiện trong while là đúng
+- do while:
++ thực hiện đoạn code ít nhất một lần, sau đó mới kiểm tra vòng lặp
+--------------------------------------------------------------------------------------------------------------------------------
+--- Break và Continue:
+- Break: có tác dụng dừng vòng lặp, cho dù điều kiện vòng lặp vẫn đang đúng.
+- Continue: có tác dụng bỏ qua một đoạn lặp nào đó, nhảy qua vòng lặp mới
+//Bài tập cơ bản:
+1. Tính tổng 2 số bằng JavaScript:
+2. Tính tổng các phần tử trong mảng bằng JavaScript
+3. Bài tập giải phương trình bậc 1 cơ bản:
+4. Bài tập về vòng lặp for trong JavaScript
+5. Vòng lặp while trong JS
+6. Bài tập tạo hàm trong JavaScript
+7. Validate dữ liệu bằng JS

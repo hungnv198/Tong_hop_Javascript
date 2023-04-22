@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.menu{
+    width: 150px;
+    background-color: blue;
+    color: #fff;
+    margin: 8px;
+    cursor: pointer;
+}
+.menu__title{
+    padding: 8px 0;
+    padding-left: 8px;
+}
+.sub__menu{
+    display: none;
+    background-color: pink;
+    padding-left: 8px;
+
+}
+.sub__menu--item{
+    padding: 4px;
+}
+

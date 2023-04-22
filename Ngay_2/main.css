@@ -1,0 +1,17 @@
+.test {
+    color: #fff;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    background-color: brown;
+}
+.clock {
+    background-color: darkgray;
+    width: 100px;
+    padding: 12px;
+    text-align: center;
+    color: red;
+    border-radius: 2px;
+    text-shadow: 1px 0 #fff, -1px 0 #fff, 0 1px #fff, 0 -1px #fff,
+             1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}

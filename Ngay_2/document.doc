@@ -1,0 +1,129 @@
+//------------------------------Xử lý chuỗi trong Javascript
+- Chuỗi: đoạn text có một hoặc nhiều kí tự có kiểu dữ liệu là String, được bao quanh bởi cặp dấu nháy đơn hoặc dấu nháy kép
+- Trong chuỗi có dấu nháy đơn, dấu nháy kép cần phải thêm dấu "\" trước chuỗi
+- dùng dấu "+" để nối chuỗi
+- Ép kiểu chuỗi: value.toString();
+- Hàm xử lý chuỗi:
++ đếm số kí tự : dùng str.length;
++ tìm kiếm chuỗi trong chuỗi: str.indexOf(str_cần_tìm);
+    Kết quả trả về: là vị trí xuất hiện đầu tiên của chuỗi cần tìm, nếu không trả về -1
++ có thể dùng lastIndexOf() để đưa ra vị trí chuỗi con cuối cùng, hoặc Search()
+1. Hàm cắt chuỗi:
+- slice(start, end): trả về chuỗi mới có vị trí từ index = start đến index = end
+- substring(start, end): giống slice nhưng tham số truyền vào luôn lớn hơn 0
+- substr(start, length): start: vị trí bắt đầu, length: số kí tự muốn lấy từ start.
+start là số âm sẽ tính từ cuối lên, length là một số dương.
+2.Tìm kiếm và thay thế chuỗi:
+- replace(str_find, str_replace);
+3. Chuyển thành chữ hoa và chữ thường:
+- toUpperCase(str): chuyển các kí tự thành chữ in hoa
+- toLowerCase(str): chuyển các kí tự thành chữ thường
+4. Nối chuỗi:
+- dùng dấu "+";
+- dùng hàm concat().
+5. Tìm kí tự hoặc mã ASCII của một kí tự:
+- tìm kí tự: charAt(index);
+- xem mã ASCII : charCodeAt(index);
+6. Chuyển đổi chuỗi sang mảng
+- dùng hàm split('')
+7. Lặp qua từng kí tự chuỗi
+//-----------------------------------------Khai báo và duyệt mảng trong Javascript
+1. Khái niệm:
+- Mảng: là một dữ liệu dạng tập hợp nhiều phần tử, trong đó mỗi phần tử sẽ được đánh dấu bằng chỉ mục.
+- Khai báo mảng: 
++ dùng từ khóa new Array();
++ dùng cặp ngoặc vuông [];
+- truy xuất phần tử mảng thông qua vị trí:
+tenmang[vitri];
+- để xem các phần tử trong mảng ta dùng join() và console.log()
+- Hàm xử lý mảng trong Javascript:
++ Thêm phần tử cuối mảng: array.push();
++ Xóa phần tử cuối mảng: array.pop();
++ Xóa phần tử đầu tiên của mảng: array.shift();
++ Thêm phần tử vào vị trí đầu tiên của mảng: array.unshift();
++ Thay thế/ xóa phần tử của mảng: splice(position, number_element_remove, value...)
+    (-) position: vị trí sẽ thêm
+    (-) number_element_remove: số lượng phần tử Xóa
+    (-) value: giá trị thay thế
++ Sắp xếp phần tử của mảng theo thứ tự chữ cái alpha: array.sort()
++ Đảo ngược phần tử: array.reverse()
++ nối mảng: concat(): trả về một mảng là tổng số phần tử của cả 2 mảng
++ Lấy phần tử trong mảng: array.slice(start, end)
+2. Cách để tạo mảng 2 chiều:
+- Mảng 2 chiều là mảng: mà mỗi phần tử của mảng đó là một mảng khác
+- Mỗi phần tử có 2 chỉ mục: vị trí nằm trong hàng, vị trí nằm trong cột
+- Khai báo:
++ Khai báo mảng 1 chiều
++ Mỗi phần tử của mảng sẽ gán là một mảng khác
+- Lấy phần tử trong mảng 2 chiều:
+array[row][column];
+- Thêm phần tử vào mảng 2 chiều:
++ thêm vào cuối mảng: push(array);
++ thêm vào đầu mảng: unshift(array);
+- Duyệt mảng 2 chiều: dùng vòng lặp lồng nhau, vòng đầu tiên lặp theo hàng, vòng thứ hai lặp theo cột
+//------------------------------------------Number
+1. Trong Js: luôn là 64bit và kiểu float
+2. Chuyển number sang String:
+- number.toString(type):
++ type: 2: nhị phân
++ type: 8: bát phân
++ type: 10: thập phân
++ type: 16: thập lục phân
+3. Số infinity:cũng là một kiểu number.
+4. NaN: Not a Number: kiểm tra: isNaN()
+5. Các hàm xử lý Number:
+- nhóm toàn cục: đối tượng không nằm trong Number
++ Number(): dùng để chuyển đổi 1 biến hoặc một giá trị sang kiểu Number. Có thể 
+Boolean(true => 1; false => 0);
+Date
+String
+Nếu như không thể chuyển đổi sẽ là NaN (Not a Number)
++ parseInt():
+(-) Nếu chuỗi có các kí tự đầu tiên là số, chuyển sang number.
+(-) Nếu dữ liệu định dạng khác String, trả về NaN
++ parseFloat(): giống vs parseInt, chuyển dữ liệu sang kiểu float
+- nhóm cục bộ: đối tượng nằm trong Number
++ toString(): chuyển một số thành String
++ toFixed(n): chuyển một số thành một số có số chữ số thập phân bằng n, có làm tròn
++ toPrecision(n): chuyển một số thành một số có độ dài n. Mặc định lấy luôn chiều dài ban đầu
+6. Đối tượng Date trong Js
+- là một object giúp lập trình viên lấy được thời gian hiện tại ở máy client, để xử lý các tác vụ liên quan
+- có 2 cách khởi tạo Date:
++ Cách 1: Truyền tham số hoặc một giá trị: 
+    new Date() // trả về ngày giờ hiện tại
+    new Date(value) //value: số giây tính từ thời gian gốc
+    new Date(dateString): //chuỗi định dạng cần lấy
++ Cách 2: Lấy tối đa 7 tham số truyền vào:
+    year: năm,
+    monthIndex: tháng,
+    day: ngày,
+    hours: giờ,
+    minutes: phút,
+    seconds: giây,
+    miliseconds: 
+- Định dạng của Date trong Js: ISO, Long, Short.
++ ISO: y-m-d hoặc y-m hoặc y
++ Long: truyền vào tên tháng là 3 chữ cái Tiếng anh
++ Short: m/d/y hoặc y/m/d hoặc m-d-y hoặc y-m-d
+
+- Hàm xử lý kiểu dữ liệu Date Get trong Javascript:
++ getDate(): lấy ngày từ 1-31;
++ getDay(): lấy ngày trong tuần 0 - 6
++ getFullYear(): lấy năm đầy đủ (yyyy)
++ getYear(): lấy năm 2 số cuối
++ getHours(): lấy số giờ (0 đến 23)
++ getMiliSecond(): lấy số mili giây
++ getMinutes(): lấy số phút ( 0 đến 59)
++ getMonth(): lấy số tháng
++ getSeconds(): lấy số giây: 0 đến 59
++ getTime(): thời gian đã được chuyển đổi sang miliseconds
+- Tương tự với mỗi hàm Date Get thì có một hàm Date Set
++ setDate(): thiết lập ngày (1-31)
++ setFullYear(): thiết lập năm đầy đủ yyyy
++ setYear(): thiết lập năm 2 số cuối
++ setHours(): thiết lập giờ từ 0 đến 23
++ setMiliSeconds(): thiết lập số milli giây (0 đến 999)
++ setMinutes(): thiết lập số phút (0 đến 59)
++ setMonth(): thiết lập số tháng ( 0 đến 11)// để nhận đúng giá trị tháng cần trừ đi 1
++ setSeconds(): thiết lập số giây ( 0 đến 59)
++ setTime(): thiết lập thời gian được chuyển đổi sang milliseconds
